@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  Fantastic! My App is finally working!
+
+<ul class="rasmtables">
+  <% for(var i=0; i<rasmtables.length; i++) {%>
+    <li class="quote">
+      <span><%= rasmtables[i].name %></span>
+      <span><%= rasmtables[i].quote %></span>
+    </li>
+  <% } %>
+</ul>  
+  
+  <form action="/" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="quote" name="quote">
+    <button type="submit">Submit</button>
+  </form>
+
+   <div>
+    <h2>Replace last written record.</h2>
+    <button id="update">Replace</button>
+  </div>
+
+  <div>
+    <h2>Delete the first record</h2>
+    <button id="delete">Delete</button>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
+
+
